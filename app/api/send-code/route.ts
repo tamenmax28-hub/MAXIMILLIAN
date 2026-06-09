@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
-import connectDB from '@/lib/mongodb'
-import User from '@/models/User'
+import nodemailer from 'nodemailer'
 
 export async function POST(req: Request) {
   const { email, code } = await req.json()
